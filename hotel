@@ -1,0 +1,70 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package akucumannyoba;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author AkmaL
+ */
+public class Bismillah3 {
+    public static void main(String[] args) {
+       Scanner input = new Scanner (System.in);
+       int a,harga=0;
+       String mengulang;
+       
+       do {
+           System.out.println("-------------------------------------------------");
+        
+        System.out.println("SELAMAT DATANG DI HOTEL GAMESA ~GAMIS,JAMET,SABRINA~");
+        System.out.println("BERIKUT ADALAH LIST KAMAR YANG TERSEDIA SAAT INI");
+        System.out.println("1. Standart Room");
+        System.out.println("2. Luxury Room");
+        System.out.println("3. Twin Room");
+        System.out.println("4. Deluxe Room");
+        System.out.println("MASUKKAN PILIHAN KAMAR ANDA");
+        a = input.nextInt();
+        
+           System.out.println("-------------------------------------------------");
+        
+        switch (a) {
+            case 1 :
+                System.out.println("Standart room dengan harga 300 ribu/malam");harga=300000;
+                break;
+            case 2 :
+                System.out.println("Luxury Room dengan harga 400 ribu/malam");harga=400000;
+                break;
+            case 3:
+                System.out.println("Twin room dengan harga 500 ribu/malam");harga=500000;
+                break;
+            case 4:
+                System.out.println("Deluxe room dengan harga 600 ribu/malam");harga=600000;
+                break;
+            default :
+                System.out.println("MAAF DATA RUANGAN TIDAK TERSEDIA");
+        }
+       
+           System.out.println("-------------------------------------------------");
+        
+           System.out.println("apakah anda yakin dengan pilihan tersebut?");
+           mengulang = input.next();
+       } while (mengulang.equals("tidak"));
+       
+        System.out.println("----------------------------------------------------");
+       
+        System.out.println("Masukkan Uang yang anda miliki = ");
+        int uang = input.nextInt();
+        int  kembalian = uang - harga;
+        
+        System.out.println("----------------------------------------------------");
+        
+        if (uang>harga) {
+            System.out.println("kembalian anda sebesar Rp"+kembalian+" terimakasih selamat menikmati");
+        } else if (uang<harga) {
+            System.out.println("maaf uang anda tidak mencukupi babayyy");
+        }
+               }
+}
